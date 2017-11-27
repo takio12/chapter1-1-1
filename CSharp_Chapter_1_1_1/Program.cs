@@ -17,10 +17,11 @@ namespace CSharp_Chapter_1_1_1
         static void Main(string[] args)
         {
            
-            Product dorayaki = new Product();
-            dorayaki.Code = 98;
-            dorayaki.Price = 210;
-            Console.WriteLine(dorayaki.GetTax());
+            Product dorayaki = new Product(98,"どら焼き",210);
+            var doratax = dorayaki.GetTax();
+            Console.WriteLine($"{doratax}円");
+            //C#6.0visual studio2015からドルマークを書くことで、直接変数を記入できるように
+
             Console.ReadKey();
         }
     }

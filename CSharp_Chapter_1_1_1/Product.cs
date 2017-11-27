@@ -13,6 +13,12 @@ namespace doradora
         public string Name { get; set; }
         public int Price { get; set; }
 
+        public Product(int code, string name,int price)
+        {
+            this.Code = code;
+                this.Name = name;
+            this.Price = price;
+        }
         public int GetTax()
         {
             return (int)(Price * 0.08);
